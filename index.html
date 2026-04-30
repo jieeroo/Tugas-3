@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yasshiro Joki — Wuthering Waves & Genshin Impact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!--  NAVBAR  -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a class="logo" href="#">
+      <span>Yasshiro<strong>Joki</strong></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#games">Games</a></li>
+      <li><a href="#layanan">Layanan</a></li>
+      <li><a href="#pesan">Pesan</a></li>
+      <li><a href="#about">Tentang Kami</a></li>
+    </ul>
+    <a href="#pesan" class="btn-nav">Pesan Sekarang</a>
+  </div>
+</nav>
+
+<!-- HERO  -->
+<header class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">✦ Trusted • Fast • Aman ✦</div>
+    <h1>Joki Game<br /><span class="gradient-text">Profesional</span></h1>
+    <p class="hero-sub">Layanan boost rank, level, dan farming terpercaya untuk<br /><strong>Wuthering Waves</strong> & <strong>Genshin Impact</strong></p>
+    <div class="hero-btns">
+      <a href="#pesan" class="btn-primary">Pesan Sekarang</a>
+      <a href="#layanan" class="btn-outline">Lihat Layanan</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Aman & Terjamin</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">Support Aktif</span></div>
+    </div>
+  </div>
+  <div class="hero-particles" id="particles"></div>
+</header>
+
+<!-- PILIH GAME -->
+<section class="section" id="games">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Game Tersedia</span>
+      <h2>Pilih Game Kamu</h2>
+    </div>
+    <div class="game-cards">
+      <div class="game-card active" id="card-ww" onclick="selectGame('wuthering_waves')">
+        <div class="game-icon ww-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#00d4ff" stroke-width="2"/><path d="M12 24 Q18 14 24 20 Q30 26 36 16" stroke="#00d4ff" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M12 30 Q18 20 24 26 Q30 32 36 22" stroke="#00d4ff" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/><circle cx="24" cy="24" r="3" fill="#00d4ff"/></svg>
+        </div>
+        <div class="game-art">
+          <img src="images/wuwa.jpg" alt="Wuthering Waves" loading="lazy" />
+        </div>
+        <h3>Wuthering Waves</h3>
+        <p>Union Level • Tower of Adversity • Farming Material</p>
+        <ul class="game-features">
+          <li>✓ Cepat & Aman</li>
+          <li>✓ Anti-ban</li>
+          <li>✓ Proses dalam 1–24 jam</li>
+        </ul>
+        <div class="game-select-indicator">Terpilih ✓</div>
+      </div>
+
+      <div class="game-card" id="card-gi" onclick="selectGame('genshin_impact')">
+        <div class="game-icon gi-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#c8a02a" stroke-width="2"/><path d="M24 8 L28 20 L40 20 L30 28 L34 40 L24 32 L14 40 L18 28 L8 20 L20 20 Z" stroke="#c8a02a" stroke-width="2" fill="none" stroke-linejoin="round"/><circle cx="24" cy="24" r="3" fill="#c8a02a"/></svg>
+        </div>
+        <div class="game-art">
+          <img src="images/Genshin Impact.jpg" alt="Genshin Impact" loading="lazy" />
+        </div>
+        <h3>Genshin Impact</h3>
+        <p>Adventure Rank • Spiral Abyss • Farming Artifact</p>
+        <ul class="game-features">
+          <li>✓ Cepat & Aman</li>
+          <li>✓ Anti-ban</li>
+          <li>✓ Proses dalam 1–24 jam</li>
+        </ul>
+        <div class="game-select-indicator">Terpilih ✓</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--  LAYANAN -->
+<section class="section section-dark" id="layanan">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Harga Terjangkau</span>
+      <h2>Daftar Layanan</h2>
+    </div>
+    <div class="service-tabs">
+      <button class="tab-btn active" onclick="loadServices('wuthering_waves', this)">Wuthering Waves</button>
+      <button class="tab-btn" onclick="loadServices('genshin_impact', this)">Genshin Impact</button>
+    </div>
+    <div class="service-grid" id="serviceGrid">
+      <div class="loading-services">Memuat layanan...</div>
+    </div>
+  </div>
+</section>
+
+<!--  FORM PEMESANAN  -->
+<section class="section" id="pesan">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Mudah & Cepat</span>
+      <h2>Form Pemesanan</h2>
+    </div>
+
+    <div class="order-wrapper">
+      <div class="order-info">
+        <h3>Cara Pemesanan</h3>
+        <ol class="steps">
+          <li><span>1</span>Pilih game & layanan yang kamu inginkan</li>
+          <li><span>2</span>Isi form dengan data akun (aman & terenkripsi)</li>
+          <li><span>3</span>Konfirmasi via WhatsApp dan lakukan pembayaran</li>
+          <li><span>4</span>Tim kami mulai proses dalam 1–24 jam</li>
+          <li><span>5</span>Selesai! Akun dikembalikan ke kamu</li>
+        </ol>
+        <div class="info-box">
+          <strong>🔒 Keamanan Akun</strong>
+          <p>Data akun kamu dienkripsi dan hanya digunakan untuk proses joki. Kami tidak menyimpan data setelah pesanan selesai.</p>
+        </div>
+        <div class="info-box info-wa">
+          <strong>📱 Hubungi Kami</strong>
+          <p>WhatsApp: <a href="https://wa.me/6285126361715" target="_blank">6285126361715</a></p>
+        </div>
+      </div>
+
+      <form class="order-form" id="orderForm" onsubmit="submitOrder(event)">
+        <div class="form-group">
+          <label>Pilih Game *</label>
+          <div class="game-radio-group">
+            <label class="radio-card">
+              <input type="radio" name="game" value="wuthering_waves" checked onchange="onGameChange(this.value)" />
+              <span>Wuthering Waves</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="game" value="genshin_impact" onchange="onGameChange(this.value)" />
+              <span>Genshin Impact</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="layanan">Pilih Layanan *</label>
+          <div class="service-radio-group" id="serviceRadioGroup">
+            <div class="loading-services" style="grid-column: 1 / -1;">Memuat layanan...</div>
+          </div>
+          <input type="hidden" id="layanan" name="layanan" required />
+          <div class="service-detail" id="serviceDetail" style="display: none; margin-top: 1rem; padding: 1rem; background: rgba(0,212,255,0.08); border-left: 3px solid var(--ww); border-radius: 6px; font-size: 0.9rem; color: var(--muted);"></div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nama">Nama Lengkap *</label>
+            <input type="text" id="nama" name="nama_pelanggan" placeholder="Nama kamu" required />
+          </div>
+          <div class="form-group">
+            <label for="whatsapp">Nomor WhatsApp *</label>
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="08xxxxxxxxxx" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="target">Target / Tujuan *</label>
+          <input type="text" id="target" name="target" placeholder="Contoh: AR 45 ke AR 55 / Floor 10 clear" required />
+        </div>
+
+        <div class="form-group">
+          <label for="server">Server / Region</label>
+          <select id="server" name="server">
+            <option value="">— Pilih server —</option>
+            <option value="Asia">Asia</option>
+            <option value="America">America</option>
+            <option value="Europe">Europe</option>
+            <option value="TW/HK/MO">TW/HK/MO</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="akun">Username / UID Akun *</label>
+            <input type="text" id="akun" name="akun_game" placeholder="Username atau UID akun" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password Akun *</label>
+            <input type="password" id="password" name="password_game" placeholder="Password akun game" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="catatan">Catatan Tambahan</label>
+          <textarea id="catatan" name="catatan" rows="3" placeholder="Karakter favorit, preferensi, dll..."></textarea>
+        </div>
+
+        <div class="price-estimate" id="priceEstimate" style="display:none">
+          <span class="price-label">Estimasi Harga:</span>
+          <span class="price-range" id="priceRange">—</span>
+        </div>
+
+        <button type="submit" class="btn-submit" id="submitBtn">
+          <span>Kirim Pesanan</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-dark" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Pertanyaan Umum</span>
+      <h2>FAQ</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Apakah akun saya aman? <span>+</span></button>
+        <div class="faq-a">Ya, akun kamu 100% aman. Kami menggunakan VPN dengan lokasi yang sama, tidak mengubah apapun selain yang diminta, dan data kamu dihapus setelah proses selesai.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Berapa lama proses joki? <span>+</span></button>
+        <div class="faq-a">Tergantung layanan yang dipilih. Umumnya 1–24 jam untuk layanan standar, dan bisa lebih lama untuk layanan besar seperti naik AR tinggi atau clear Abyss.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Metode pembayaran apa saja yang tersedia? <span>+</span></button>
+        <div class="faq-a">Transfer Bank (BCA, Mandiri, BNI), GoPay, OVO, DANA, dan QRIS. Pembayaran dilakukan setelah konfirmasi pesanan via WhatsApp.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Apakah ada garansi jika pesanan gagal? <span>+</span></button>
+        <div class="faq-a">Tentu! Jika pesanan gagal karena kesalahan kami, kami akan refund penuh atau proses ulang tanpa biaya tambahan.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER  -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="logo" href="#">⚔ Yasshiro<strong>Joki</strong></a>
+        <p>Layanan joki game profesional terpercaya untuk Wuthering Waves dan Genshin Impact.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Layanan</h4>
+        <ul>
+          <li><a href="#layanan">Wuthering Waves</a></li>
+          <li><a href="#layanan">Genshin Impact</a></li>
+          <li><a href="#pesan">Pesan Sekarang</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Kontak</h4>
+        <ul>
+          <li><a href="https://wa.me/628123456789">WhatsApp</a></li>
+          <li><a href="#">Discord</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 NightCoreJoki. All rights reserved. Bukan afiliasi resmi Kuro Games atau miHoYo.</p>
+    </div>
+  </div>
+</footer>
+
+<!--  NOTIFICATION -->
+<div class="toast" id="toast"></div>
+
+<script src="ani.js"></script>
+</body>
+</html>
